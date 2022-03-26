@@ -7,6 +7,7 @@ export const devServerConfig = {
     headers: {'Access-Control-Allow-Origin': '*'},
     historyApiFallback: true,
     hot: true,
+    open: true,
     proxy: devServerProxyConfig,
     static: {
         publicPath: '/',

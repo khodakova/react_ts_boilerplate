@@ -1,11 +1,10 @@
+/**
+ * Замена переменных в коде значениями, указанными здесь, во время компиляции
+ * Эти значения будут встроены в код, позволяя его минифицировать, т.к. не будут
+ * использованы избыточные условные выражения
+ */
 import {DefinePlugin} from 'webpack';
 
-/**
- * @example
- * const config = {
- *     isProd: true
- * }
- */
 import {isDev, isDevServer, isProd, mode} from '../utils/env';
 
 const config = {

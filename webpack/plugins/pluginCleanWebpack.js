@@ -1,3 +1,6 @@
+/**
+ * Очистка директории, в которую билдится проект
+ */
 import {CleanWebpackPlugin} from 'clean-webpack-plugin';
 
 const config = {

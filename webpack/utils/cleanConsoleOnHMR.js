@@ -1,6 +1,6 @@
 /**
- * Reconfigure default HMR behavior, now it clears your console on every
- * codebase update
+ * Перенастройка дефолтного поведения Hot Module Replacement
+ * для очистки консоли после каждого обновления кода
  */
 if (IS_DEV_SERVER) {
     if (module.hot) {

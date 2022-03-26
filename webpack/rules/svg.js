@@ -1,8 +1,8 @@
 import {babelLoader} from './useLoaderRuleItems';
 
 /**
- * Using @svgr/webpack for handling svg files in react components
- * @see https://react-svgr.com/docs/webpack/
+ * Позволяет использовать svg в react компонентах
+ * https://react-svgr.com/docs/webpack/
  */
 export const svgReactComponentRule = {
     test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -20,8 +20,9 @@ export const svgReactComponentRule = {
 };
 
 /**
- * Using file-loader for handling svg files
- * @see https://webpack.js.org/guides/asset-modules/
+ * Модуль ресурсов
+ * Позволяет использовать файлы ресурсов без настройки дополнительных загрузчиков
+ * https://webpack.js.org/guides/asset-modules/
  */
 export const svgRule = {
     test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,

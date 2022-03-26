@@ -1,3 +1,6 @@
+/**
+ * Использование eslint для поиска и исправления проблем в коде
+ */
 import {join} from 'path';
 
 import ESLintPlugin from 'eslint-webpack-plugin';

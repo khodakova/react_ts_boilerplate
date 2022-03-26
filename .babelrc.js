@@ -1,7 +1,7 @@
 module.exports = (api) => {
     const mode = process.env.NODE_ENV ?? 'production';
 
-    // This caches the Babel config by environment.
+    // кэширует конфиг babel
     api.cache.using(() => mode);
 
     return {
@@ -20,12 +20,20 @@ module.exports = (api) => {
             '@babel/preset-react',
         ],
         plugins: [
+            // разрешает использовать import()
             '@babel/plugin-syntax-dynamic-import',
+            // преобразует свойства статических классов
             '@babel/plugin-proposal-class-properties',
+            /*
+                 компилирует экспорт пространства имен es2015
+                 example:    export * as ns from "mod";
+             */
             '@babel/plugin-proposal-export-namespace-from',
+            // позволяет использовать throw expressions (errors)
             '@babel/plugin-proposal-throw-expressions',
+            // позволяет использовать spread и rest операторы
             '@babel/proposal-object-rest-spread',
-            // Applies the react-refresh Babel plugin on non-production modes only
+            // подключаем react-refresh/babel только не в production режиме
             mode !== 'production' && 'react-refresh/babel',
         ].filter(Boolean),
     };

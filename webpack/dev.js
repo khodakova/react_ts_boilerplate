@@ -1,3 +1,7 @@
+/**
+ * fast refresh для реакта
+ * Обновление дом дерева без потери состояния
+ */
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 import {devServerConfig} from './config';

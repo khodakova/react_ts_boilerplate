@@ -29,7 +29,6 @@ export default {
             rules.imagesRule,
             rules.fontsRule,
             rules.cssRule,
-            // ...rules.lessRules,
             ...rules.sassRules,
             ...rules.svgRules,
         ]),

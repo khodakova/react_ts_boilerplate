@@ -21,7 +21,8 @@ export const javascriptRule = {
 };
 
 /**
- * @see https://webpack.js.org/loaders/html-loader
+ * Экспорт html в виде строки
+ * https://webpack.js.org/loaders/html-loader
  */
 export const htmlRule = {
     test: /\.(html)$/,
@@ -30,18 +31,18 @@ export const htmlRule = {
     },
 };
 /**
- * @see https://webpack.js.org/guides/asset-modules/
+ * Модуль ресурсов
+ * Позволяет использовать файлы ресурсов без настройки дополнительных загрузчиков
+ * https://webpack.js.org/guides/asset-modules/
  */
 export const imagesRule = {
     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-    type: 'asset/resource',
+    type: 'asset/resource', // создает отдельный файл и экспортирует url. Замена file-loader
 };
-/**
- * @see https://webpack.js.org/guides/asset-modules/
- */
+
 export const fontsRule = {
     test: /\.(woff(2)?|eot|ttf|otf|)$/,
-    type: 'asset/inline',
+    type: 'asset/inline',   // экспорт uri ассета. Замена url-loader
 };
 
 /**

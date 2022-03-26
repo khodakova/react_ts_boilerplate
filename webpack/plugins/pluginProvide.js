@@ -1,8 +1,5 @@
 /**
- * @example
- *  const config = {
- *       $: 'jquery',
- *  }
+ * Автоматическая загрузка модулей вместо использования import или require
  */
 import {ProvidePlugin} from 'webpack';
 
